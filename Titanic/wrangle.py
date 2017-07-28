@@ -60,8 +60,8 @@ def wrangle(df):
 
     df = df.drop('Cabin', 1) #drop Cabin column
     
-    ### Drop PassengerID and Name
-    df = df.drop(["PassengerId","Name"], 1)
+    ### Drop Name
+    df = df.drop("Name", 1)
     
     ### Add Dummy Variables for Sex, Embarked, and Ticket_Prefix
     df = df.join(pd.get_dummies(df["Sex"]))
