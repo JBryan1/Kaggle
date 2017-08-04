@@ -46,7 +46,6 @@ def wrangle(df):
     ### Create Columns for Unique Cabin Letters 
     cabin = list(df.Cabin.unique())
     uniqueLetters = uniqueLetters(cabin) #Retrieve unique cabin letters
-    print(uniqueLetters)
     #Create numeric binary columns for each letter
     for letter in uniqueLetters:
         df["Cabin_" + letter] = 0
